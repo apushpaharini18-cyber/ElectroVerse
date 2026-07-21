@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>ElectroVerse AI Simulation</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+
+body{
+    background:#eefaff;
+}
+
+
+/* Header */
+
+.header{
+
+    height:70px;
+    background:#87CEEB;
+    display:flex;
+    align-items:center;
+    padding:20px;
+    color:#00334d;
+    font-size:28px;
+    font-weight:bold;
+
+}
+
+
+/* Main Layout */
+
+.main{
+
+    display:flex;
+    height:calc(100vh - 70px);
+
+}
+
+
+/* Left Component Panel */
+
+.components{
+
+    width:250px;
+    background:white;
+    padding:20px;
+    border-right:2px solid #ddd;
+    overflow:auto;
+
+}
+
+
+.components h2{
+
+    color:#00334d;
+    margin-bottom:20px;
+
+}
+
+
+.item{
+
+    background:#e8f8ff;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    cursor:pointer;
+
+}
+
+
+.item:hover{
+
+    background:#87CEEB;
+
+}
+
+
+
+/* Workspace */
+
+
+.workspace{
+
+    flex:1;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+.canvas{
+
+    width:75%;
+    height:75%;
+    border:3px dashed #00a8e8;
+    background:white;
+    position:relative;
+
+}
+
+
+.canvas h3{
+
+    text-align:center;
+    margin-top:20px;
+    color:#aaa;
+
+}
+
+
+
+/* Right Controls */
+
+
+.controls{
+
+    width:180px;
+    background:white;
+    border-left:2px solid #ddd;
+    padding:20px;
+
+}
+
+
+button{
+
+    width:140px;
+    padding:15px;
+    margin:15px 0;
+    border:none;
+    border-radius:25px;
+    background:#00a8e8;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+
+}
+
+
+button:hover{
+
+    background:#00334d;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="header">
+
+⚡ ELECTROVERSE-AI | Circuit Simulation Lab
+
+</div>
+
+
+
+<div class="main">
+
+
+<!-- Components -->
+
+<div class="components">
+
+<h2>Components</h2>
+
+
+<div class="item">🔲 Microcontroller</div>
+
+<div class="item">📡 Sensors</div>
+
+<div class="item">〰️ Resistance</div>
+
+<div class="item">🔋 Capacitance</div>
+
+<div class="item">🌀 Inductance</div>
+
+<div class="item">🔋 Battery</div>
+
+<div class="item">⚙️ AC / DC Motor</div>
+
+
+</div>
+
+
+
+<!-- Workspace -->
+
+
+<div class="workspace">
+
+
+<div class="canvas">
+
+<h3>
+Drag Components Here
+<br>
+Circuit Working Area
+</h3>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<!-- Controls -->
+
+
+<div class="controls">
+
+
+<h2>Tools</h2>
+
+
+<button>
+🖱 Drag
+</button>
+
+
+<button>
+🗑 Delete
+</button>
+
+
+<button>
+▶ Run
+</button>
+
+
+<button>
+💾 Save
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+</body>
+</html>

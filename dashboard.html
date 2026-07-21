@@ -2,23 +2,275 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>ElectroVerse AI Dashboard</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ElectroVerse-AI Dashboard</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+
+body{
+    background:white;
+}
+
+
+/* Top Navigation */
+
+.navbar{
+
+    height:70px;
+    background:#87CEEB;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 40px;
+
+}
+
+
+.logo{
+
+    font-size:28px;
+    font-weight:bold;
+    color:#00334d;
+
+}
+
+
+/* Menu */
+
+.menu{
+
+    font-size:35px;
+    cursor:pointer;
+
+}
+
+
+.dropdown{
+
+    display:none;
+    position:absolute;
+    right:30px;
+    top:65px;
+    background:white;
+    width:160px;
+    box-shadow:0 5px 15px gray;
+    border-radius:10px;
+
+}
+
+
+.dropdown p{
+
+    padding:15px;
+    cursor:pointer;
+
+}
+
+
+.dropdown p:hover{
+
+    background:#e6f7ff;
+
+}
+
+
+/* Main */
+
+.container{
+
+    text-align:center;
+    padding:40px;
+
+}
+
+
+h1{
+
+    color:#00334d;
+    margin-bottom:20px;
+
+}
+
+
+.subtitle{
+
+    color:#555;
+    font-size:18px;
+
+}
+
+
+
+/* Cards */
+
+.cards{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+
+}
+
+
+
+.card{
+
+    background:#f8fdff;
+    border-left:5px solid #00a8e8;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px #ddd;
+    font-size:20px;
+    font-weight:bold;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+    transition:0.3s;
+
+}
+
+
+</style>
+
 </head>
+
 
 <body>
 
-<header>
 
-<h1>ElectroVerse AI</h1>
+<!-- Navigation Bar -->
 
-<p>Engineering Learning Platform</p>
+<div class="navbar">
 
-</header>
 
-<h2 align="center">Choose Your Category</h2>
+<div class="logo">
+ELECTROVERSE-AI ⚡
+</div>
+
+
+<div class="menu" onclick="openMenu()">
+☰
+</div>
+
+
+<div class="dropdown" id="drop">
+
+<p>🔐 Login</p>
+
+<p>➕ New Project</p>
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="container">
+
+
+<h1>
+Welcome to ElectroVerse AI
+</h1>
+
+
+<p class="subtitle">
+
+Explore intelligent electronics, AI solutions,
+IoT innovation and engineering tools.
+
+</p>
+
+
+
+
+<div class="cards">
+
+
+<a href="circuit.html" style="text-decoration:none;color:black;">
+
+<div class="card">
+⚙️ Circuit Design and Simulation
+</div>
+
+</a>
+
+
+<div class="card">
+🖥️ PCB Design
+</div>
+
+
+<div class="card">
+🤖 AI Generate
+</div>
+
+
+<div class="card">
+🔌 Microcontroller and Sensors
+</div>
+
+
+<div class="card">
+📘 MATLAB and Proteus Learning Guide
+</div>
+
+
+<div class="card">
+🚗 EV System Design
+</div>
+
+
+<div class="card">
+🎓 Learning Hub
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+function openMenu(){
+
+let menu=document.getElementById("drop");
+
+if(menu.style.display=="block")
+{
+menu.style.display="none";
+}
+
+else
+{
+menu.style.display="block";
+}
+
+}
+
+</script>
+
 
 </body>
 
