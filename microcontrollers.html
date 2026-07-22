@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ElectroVerse AI - Microcontrollers</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#eefaff;
+}
+
+.header{
+    background:#87CEEB;
+    color:#00334d;
+    text-align:center;
+    padding:20px;
+}
+
+.main{
+    display:flex;
+    height:90vh;
+}
+
+.leftpanel{
+    width:280px;
+    background:white;
+    padding:20px;
+    overflow:auto;
+    border-right:2px solid #ddd;
+}
+
+.item{
+    background:#e8f8ff;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    cursor:grab;
+    font-weight:bold;
+}
+
+.item:hover{
+    background:#87CEEB;
+}
+
+.workspace{
+    flex:1;
+    margin:20px;
+    border:3px dashed #00a8e8;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    color:#888;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+<h1>🤖 ElectroVerse AI</h1>
+<h2>Microcontrollers Library</h2>
+</div>
+
+<div class="main">
+
+<div class="leftpanel">
+
+<div class="item" draggable="true">Arduino UNO</div>
+<div class="item" draggable="true">Arduino Nano</div>
+<div class="item" draggable="true">Arduino Mega 2560</div>
+<div class="item" draggable="true">Arduino Leonardo</div>
+<div class="item" draggable="true">ESP32 DevKit V1</div>
+<div class="item" draggable="true">ESP32-S2</div>
+<div class="item" draggable="true">ESP32-S3</div>
+<div class="item" draggable="true">ESP32-C3</div>
+<div class="item" draggable="true">ESP8266 NodeMCU</div>
+<div class="item" draggable="true">Raspberry Pi Pico</div>
+<div class="item" draggable="true">Raspberry Pi Pico W</div>
+<div class="item" draggable="true">STM32 Blue Pill</div>
+<div class="item" draggable="true">STM32 Nucleo</div>
+<div class="item" draggable="true">ATmega328P</div>
+<div class="item" draggable="true">ATmega2560</div>
+<div class="item" draggable="true">ATtiny85</div>
+<div class="item" draggable="true">PIC16F877A</div>
+<div class="item" draggable="true">PIC18F4550</div>
+<div class="item" draggable="true">8051</div>
+<div class="item" draggable="true">MSP430</div>
+<div class="item" draggable="true">Teensy 4.1</div>
+<div class="item" draggable="true">BBC micro:bit</div>
+
+</div>
+
+<div class="workspace">
+<h2>Drop Microcontrollers Here</h2>
+</div>
+
+</div>
+
+</body>
+<script>
+
+const items = document.querySelectorAll(".item");
+const workspace = document.querySelector(".workspace");
+
+items.forEach(item => {
+
+    item.addEventListener("dragstart", function(){
+
+        event.dataTransfer.setData("text", this.innerHTML);
+
+    });
+
+});
+
+workspace.addEventListener("dragover", function(event){
+
+    event.preventDefault();
+
+});
+
+workspace.addEventListener("drop", function(event){
+
+    event.preventDefault();
+
+    let text = event.dataTransfer.getData("text");
+
+    let component = document.createElement("div");
+
+    component.innerHTML = text;
+
+    component.style.background="#87CEEB";
+    component.style.padding="12px";
+    component.style.margin="10px";
+    component.style.borderRadius="8px";
+    component.style.width="220px";
+    component.style.textAlign="center";
+
+    workspace.appendChild(component);
+
+});
+
+</script>
+</html>
